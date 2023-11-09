@@ -1,0 +1,23 @@
+{
+  "name": "async-postmessage",
+  "version": "0.0.0",
+  "description": "Asynchronous iframe communication based on postMessage",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pxs797/async-postMessage.git"
+  },
+  "keywords": [
+    "async",
+    "postMessage"
+  ],
+  "author": "Mark Peng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pxs797/async-postMessage/issues"
+  },
+  "homepage": "https://github.com/pxs797/async-postMessage#readme"
+}
