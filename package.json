@@ -1,10 +1,11 @@
 {
-  "name": "async-postmessage",
-  "version": "0.0.0",
-  "description": "Asynchronous iframe communication based on postMessage",
-  "main": "src/index.js",
+  "name": "async-messenger",
+  "version": "1.0.0",
+  "description": "Synchronized communication between windows and iframes",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "build": "rollup --config rollup.config.mjs",
+    "build": "rollup --config rollup.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,7 +14,9 @@
   },
   "keywords": [
     "async",
-    "postMessage"
+    "postMessage",
+    "iframe",
+    "Web Worker"
   ],
   "author": "Mark Peng",
   "license": "MIT",
@@ -25,7 +28,9 @@
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
     "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-json": "^6.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
     "rollup": "^4.3.0"
   }
 }
