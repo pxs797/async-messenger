@@ -10,20 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pxs797/async-postMessage.git"
+    "url": "git+https://github.com/pxs797/async-messenger.git"
   },
   "keywords": [
     "async",
     "postMessage",
-    "iframe",
-    "Web Worker"
+    "iframe"
   ],
   "author": "Mark Peng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pxs797/async-postMessage/issues"
+    "url": "https://github.com/pxs797/async-messenger/issues"
   },
-  "homepage": "https://github.com/pxs797/async-postMessage#readme",
+  "homepage": "https://github.com/pxs797/async-messenger#readme",
   "devDependencies": {
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
