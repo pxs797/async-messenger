@@ -1,10 +1,12 @@
-# async-postMessage
+# async-messenger
 
-🚀 Asynchronous iframe communication based on postMessage
+🚀 Synchronized communication between windows and iframes
 
-## Sample usage
+## Installing
 
-### parent.html
+## Example
+
+parent.html
 
 ```html
 <html>
@@ -13,17 +15,13 @@
 
   <script type="module">
 
-    import MessageWrapper from 'src/index.js'
+    import asyncMessenger from 'async-messenger'
 
     const child = document.querySelector('#child')
     child.onload = async () => {
-      
-      console.log('===== child on ready =====')
-      
-      const messageWrapper = new MessageWrapper(child.contentWindow)
-      const res = await messageWrapper.post({event: 'say'})
-      console.log('from child: ', res)
-
+      const messenger = asyncMessenger.create({target: child.contentWindow})
+      const res = await messenger.post({event: 'say'})
+      console.log(res) // Hello World
     }
 
   </script>
@@ -32,7 +30,7 @@
 </html>
 ```
 
-### child.html
+child.html
 
 ```html
 <html>
@@ -40,13 +38,13 @@
 
   <script type="module">
 
-    import MessageWrapper from 'src/index.js'
+    import asyncMessenger from 'async-messenger'
 
-    const messageWrapper = new MessageWrapper(window.parent)
+    const messenger = asyncMessenger.create({target: window.parent})
     window.addEventListener('message', async (e) => {
-      const { event, channel } = e.data
-      if (event == 'say') {
-        messageWrapper.send({ channel, data: 'Hello World' })
+      const { data, channel } = e.data
+      if (data.event == 'say') {
+        messenger.send({ channel, data: 'Hello World' })
       }
     })
 
