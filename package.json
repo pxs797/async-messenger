@@ -1,6 +1,6 @@
 {
   "name": "@pengxs/async-messenger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Synchronized communication between windows and iframes",
   "main": "index.js",
   "type": "module",
