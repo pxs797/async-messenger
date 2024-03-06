@@ -4,6 +4,26 @@
 
 ## Installing
 
+### Package manager
+
+Using npm:
+
+```bash
+$ npm install @pengxs/asyn-messenger
+```
+
+Using yarn:
+
+```bash
+$ yarn add @pengxs/async-messenger
+```
+
+Using pnpm:
+
+```bash
+$ pnpm add @pengxs/async-messenger
+```
+
 ## Example
 
 parent.html
@@ -15,7 +35,7 @@ parent.html
 
   <script type="module">
 
-    import asyncMessenger from 'async-messenger'
+    import asyncMessenger from '@pengxs/async-messenger'
 
     const child = document.querySelector('#child')
     child.onload = async () => {
@@ -38,7 +58,7 @@ child.html
 
   <script type="module">
 
-    import asyncMessenger from 'async-messenger'
+    import asyncMessenger from '@pengxs/async-messenger'
 
     const messenger = asyncMessenger.create({target: window.parent})
     window.addEventListener('message', async (e) => {
