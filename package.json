@@ -1,5 +1,5 @@
 {
-  "name": "async-messenger",
+  "name": "@pengxs/async-messenger",
   "version": "1.0.0",
   "description": "Synchronized communication between windows and iframes",
   "main": "index.js",
